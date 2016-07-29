@@ -1,0 +1,50 @@
+<ion-view title="My Schedule" ng-controller="scheduleCtrl as vm"  view-title="Schedule">
+    <ion-content class="has-header">
+        <div class="padding">
+            <h4>Welcome John Doe</h4>
+            <h5>What is your availability?</h5>
+        </div>
+
+        <div class="list">
+            <div class="item">
+                <div class="btn-match" style="display: inline-block; line-height: 42px; font-size: 30px;">
+                    {{vm.schedule.selectedDate | date}}    
+                </div> 
+
+                <button ng-click="vm.openDatePicker()" class="button button-positive" style="float: right;">
+                    Available Date
+                </button>
+            </div>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    From
+                </div>
+                <select ng-model="vm.schedule.fromHour">
+                    <option ng-repeat="hour in vm.hours" value="{{hour.value}}">
+                        {{hour.hour}}
+                    </option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    To
+                </div>
+                <select ng-model="vm.schedule.toHour">
+                    <option ng-repeat="hour in vm.hours" value="{{hour.value}}">
+                        {{hour.hour}}
+                    </option>
+                </select>
+            </label>
+
+            <div class="item">
+                <button class="button button-outline button-full button-positive" style="float: right;">
+                    Add more
+                </button>
+            </div>
+
+            
+        </div>
+    </ion-content>
+</ion-view>

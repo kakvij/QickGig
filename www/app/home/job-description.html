@@ -1,0 +1,34 @@
+<ion-view ng-controller="jobDescriptionCtrl as vm" view-title="{{jobTitle}}">
+    <div class="bar bar-stable">
+        <a ui-sref="home.search" class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
+        <h2 class="title">JobID {{vm.locationId}}</h2>
+    </div>
+
+    <ion-header-bar class="bar bar-subheader">
+        <div class="bar bar-header">
+            <div class="button-bar">
+                <a class="button button-positive">Description</a>
+                <a class="button">Reviews</a>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="padding">
+            <h4>Gardening</h4>
+            <h5>Date: Jul 29, 2016</h5>
+            <h6>Needed from 9am to 3pm <span style="float: right;">Hourly rate: $15</span></h6>
+            <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>
+                t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+       
+        <button class="button button-balanced">I am interested</button>
+        <button style="margin-left: 5px" class="button button-dark button-outline">Message</button>
+        <button style="margin-left: 5px" class="button button-dark button-outline">Not Interested</button>
+        <button class="button button-icon icon ion-share pull-right"></button>
+        
+    </div>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-nav-bar class="bar-stable">
+    <ion-nav-title>My Schedule</ion-content>
+    <div class="buttons">
+        <button class="button">Left Button</button>
+    </div>
+</ion-nav-bar>
+<!--<div class="bar bar-header">
+  <div class="h1 title">QuickGig</div>
+  <a class="button button-icon icon ion-log-out" ui-sref="login"></a>
+</div>-->
+
+<ion-tabs class="tabs-icon-top">
+    <ion-tab title="Schedule" icon="ion-home" ui-sref="home.schedule">
+        <ion-nav-view name="tab-schedule"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Profile" icon="ion-star" ui-sref="home.profile">
+        <ion-nav-view name="tab-profile"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Search" icon="ion-search" ui-sref="home.search">
+        <ion-nav-view name="tab-search"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

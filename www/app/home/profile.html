@@ -1,0 +1,64 @@
+<ion-view ng-controller="profileCtrl as vm" view-title="Profile">
+    <ion-nav-buttons side="right">
+      <a class="button button-positive button-outline" ui-sref="login">Logout</a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="item item-divider">
+                My Info
+            </div>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">First Name</span>
+                <input type="text" placeholder="John" ng-model="vm.profile.firstName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Suhr" ng-model="vm.profile.lastName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="john@suhr.com" ng-model="vm.profile.email">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Phone</span>
+                <input type="text" placeholder="(xxx)xxx-xxxx" ng-model="vm.profile.phone">
+            </label>
+
+
+            <div class="item item-divider">
+                My Location
+            </div>
+            <div class="item item-toggle">
+                Use my current location
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="vm.profile.useLocation">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="item item-divider">
+                My Skills
+            </div>
+            <div class="list">
+                <form class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="Skill" ng-model="vm.skill">
+                    </label>
+                    <button class="button button-positive button-small" style="padding-left: 10px; padding-right: 10px;" ng-click="vm.addSkill(vm.skill)">
+                        Add
+                    </button>
+            </div>
+        </div>
+        <div class="padding">
+            <div class="button button-balanced button-small" 
+            ng-repeat="skill in vm.profile.skills track by $index" 
+            ng-click="vm.removeSkill($index)"
+            style="padding: 0 7px; line-height: 22px; font-size: 11px; min-height: 22px; margin-right: 5px; margin-bottom: 5px;">
+                {{skill}}
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

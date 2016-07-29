@@ -1,0 +1,18 @@
+<ion-view ng-controller="searchListCtrl as vm" view-title="{{jobTitle}}">
+    <div class="bar bar-stable">
+        <a ui-sref="home.search" class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
+        <h2 class="title">Full List</h2>
+    </div>
+    <ion-content class="has-header">
+        <ion-list>
+            <div class="item item-divider">
+                Jul 29, 2016
+            </div>
+            <ion-item class="item-icon-right" ng-repeat="marker in vm.markers" ng-href="#/search/details/{{marker.id}}">
+                {{marker.title}} 
+                <span style="float:right">Rate: ${{marker.rate}}</span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

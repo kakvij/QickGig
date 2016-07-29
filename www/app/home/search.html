@@ -1,0 +1,13 @@
+<ion-view ng-controller="searchCtrl" view-title="Search">
+    <ion-nav-buttons side="right">
+        <a class="button button-positive button-outline" href="#/search/list">Full list</a>
+    </ion-nav-buttons>
+    <div style="margin-top: 44px;">
+        <div my-map markers="markers" default-loc="defaultLoc"></div>
+    </div>
+    <style>
+        #gmaps {
+            height: 643px;
+        }
+    </style>
+</ion-view>
